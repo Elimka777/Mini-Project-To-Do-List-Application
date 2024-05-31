@@ -1,4 +1,4 @@
-# Mini-Project. To-Do List Application ✅
+# Mini-Project: To-Do List Application ✅
 
 ------------------------------------------
              
