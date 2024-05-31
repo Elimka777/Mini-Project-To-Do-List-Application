@@ -4,23 +4,24 @@ def addTask():
     num_tasks = int(input("Number of tasks you want to add: "))
     for i in range(num_tasks):
         task=input(f"Enter the {i + 1} task:")
-        tasks.append({"task": task, "done": False})
+        tasks.append({"task": task, "complete": False})
         print("Task added.")
 def listTask():
     print("\nTasks:")
     for index, task in enumerate(tasks):
-        status = "done" if task["done"] else "not done"
+        status = "complete" if task["complete"] else "incomplete"
         print(f"{index+1}. {task['task']} - {status}")
 def markTask():
     try:  
      task_index = int(input("Enter the number of the task to mark as done:")) - 1
      if 0 <= task_index< len(tasks):
-        tasks[task_index]["done"] = True
-        print(f"Task {tasks[task_index]['task']} marked as done")
+        tasks[task_index]["complete"] = True
+        print(f"Task {tasks[task_index]['task']} marked as complete")
      else:
-        print('Invalid task number.')
+        print('Invalid task number. Please try again.')
     except ValueError:
-        print("Please enter a valid number.")
+        print("Please enter a number.")
+    
 def deleteTask():
     try: 
      task_index = int(input("Enter the number of the task you want to delete: ")) - 1
@@ -28,9 +29,9 @@ def deleteTask():
         removed_task = tasks.pop(task_index)
         print(f"Task '{removed_task['task']}' removed.")
      else:
-        print('Invalid task number.')
+        print('Invalid task number. PLease try again.')
     except ValueError:
-        print("Please enter a valid number.")
+        print("Please enter a number.")
 
 
 if __name__ == "__main__":
