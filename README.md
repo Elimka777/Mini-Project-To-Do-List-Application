@@ -1,5 +1,4 @@
 # Mini-Project. To-Do List Application ✅
-
-<----------------------------------------->
+-----------------------------------------
              
-           Student: Elima 
+            Student: Elima
